@@ -59,5 +59,5 @@ All tools used in the scenario described above except finish are not avaible to 
 """
 
 react_nudge = """
-Always include thoughts before actions to ensure all tool calls and responses are well planned. All responses must include thoughts and actions.
+Always include thoughts before actions to ensure all tool calls and responses are well planned. All responses must include thoughts and one and only one action. And all actions must be returned as JSON.
 """
