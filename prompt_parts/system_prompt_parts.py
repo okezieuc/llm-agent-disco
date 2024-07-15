@@ -35,7 +35,7 @@ Thought 2: The SHA3-256 hash of Hello World is e167f68d6563d75bb25f3aa49c29ef612
 Action 2: {
     "tool": "finish",
     "args": {
-    "response": "e167",
+    "response": "The first four characters of the SHA3-256 hash of Hello world are e167.",
     }
 }
 
@@ -43,9 +43,21 @@ Action 2: {
 
 
 tool_setup_intro = """
+If a tool call is not needed to respond to a prompt, return a finish action with the response in the body. Here is a demonstration of this behavior:
+
+Question: How many letters are there in the English alphabet.
+Thought 1: There are 26 letters in the English alphabet.
+Action 1: {
+    "tool": "finish",
+    "args": {
+        "response": "There are twenty six letters in the english alphabet.",
+    }
+}
+
+
 All tools used in the scenario described above except finish are not avaible to be used if unless mentioned below. It is always available. Here is a list of tools that are available and the arguments they accept:
 """
 
 react_nudge = """
-Always include thoughts before actions to ensure all tool calls and responses are well planned.
+Always include thoughts before actions to ensure all tool calls and responses are well planned. All responses must include thoughts and actions.
 """
